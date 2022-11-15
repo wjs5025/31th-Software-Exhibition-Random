@@ -29,5 +29,11 @@ result_map.forEach((value, key, map) => {
   }
 });
 
+// 날짜 및 시간 출력
+const KST = new Date(new Date().getTime() + 9 * 60 * 60 * 1000)
+  .toISOString()
+  .replace("T", " "); // utc로 변환된 값을 한국 시간으로 변환시키기 위해 9시간(밀리세컨드)를 더함
+
 // 결과 출력
+console.log(KST);
 console.log(result_map);
